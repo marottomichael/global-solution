@@ -1,0 +1,39 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo com gradiente verde característico do Greenpeace -->
+  <defs>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00b04f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006400;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="300" height="200" fill="url(#greenGradient)"/>
+  
+  <!-- Círculo central -->
+  <circle cx="150" cy="100" r="70" fill="#004d25" opacity="0.8"/>
+  
+  <!-- Texto GREENPEACE -->
+  <text x="150" y="80" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">GREEN</text>
+  <text x="150" y="100" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">PEACE</text>
+  <text x="150" y="120" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="600">BRASIL</text>
+  
+  <!-- Símbolo da paz estilizado -->
+  <circle cx="150" cy="40" r="15" stroke="white" stroke-width="3" fill="none"/>
+  <line x1="150" y1="28" x2="150" y2="52" stroke="white" stroke-width="3"/>
+  <line x1="140" y1="35" x2="150" y2="45" stroke="white" stroke-width="3"/>
+  <line x1="160" y1="35" x2="150" y2="45" stroke="white" stroke-width="3"/>
+  
+  <!-- Ondas/mar na parte inferior -->
+  <path d="M 50 150 Q 80 140 110 150 Q 140 140 170 150 Q 200 140 230 150 Q 260 140 290 150" stroke="#00ffff" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M 30 160 Q 60 150 90 160 Q 120 150 150 160 Q 180 150 210 160 Q 240 150 270 160" stroke="#87ceeb" stroke-width="3" fill="none" opacity="0.7"/>
+  
+  <!-- Elementos de natureza -->
+  <circle cx="80" cy="170" r="4" fill="#90ee90"/>
+  <circle cx="120" cy="175" r="3" fill="#98fb98"/>
+  <circle cx="180" cy="175" r="3" fill="#98fb98"/>
+  <circle cx="220" cy="170" r="4" fill="#90ee90"/>
+  
+  <!-- Folhas pequenas -->
+  <path d="M 70 180 Q 75 175 80 180 Q 75 185 70 180" fill="#32cd32"/>
+  <path d="M 220 180 Q 225 175 230 180 Q 225 185 220 180" fill="#32cd32"/>
+</svg> 
