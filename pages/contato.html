@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - EcoVaquinho</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="py-3">
+        <div class="container">
+            <div class="logo display-4 fw-bold">EcoVaquinho</div>
+            <div class="header-right-elements d-flex align-items-center">
+                <div class="search-wrapper me-3">
+                    <input type="search" class="form-control search-bar" placeholder="Pesquisar..." aria-label="Barra de pesquisa">
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ongs.html">ONGs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="campanhas.html">Campanhas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="text-center fw-bold mb-5">Entre em Contato</h1>
+                <p class="text-center lead mb-5">Tem alguma dúvida, sugestão ou gostaria de fazer uma parceria? Adoraríamos ouvir de você!</p>
+                
+                <form>
+                    <div class="mb-3">
+                        <label for="contactName" class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control" id="contactName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactEmail" class="form-label">Endereço de Email</label>
+                        <input type="email" class="form-control" id="contactEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactSubject" class="form-label">Assunto</label>
+                        <input type="text" class="form-control" id="contactSubject">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactMessage" class="form-label">Sua Mensagem</label>
+                        <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary-custom btn-lg">Enviar Mensagem</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 EcoVaquinho. Todos os direitos reservados.</p>
+            <p><a href="#" class="footer-link">Política de Privacidade</a> | <a href="#" class="footer-link">Termos de Uso</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

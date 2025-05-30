@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONGs - EcoVaquinho</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css"> <!-- Ajuste o caminho para o style.css -->
+</head>
+<body>
+    <header class="py-3">
+        <div class="container">
+            <div class="logo display-4 fw-bold">EcoVaquinho</div>
+            <div class="header-right-elements d-flex align-items-center">
+                <div class="search-wrapper me-3">
+                    <input type="search" class="form-control search-bar" placeholder="Pesquisar..." aria-label="Barra de pesquisa">
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">ONGs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="campanhas.html">Campanhas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <h1 class="text-center fw-bold mb-5">Organizações Não Governamentais Parceiras</h1>
+        <p class="text-center lead mb-5">Conheça as ONGs que estão na linha de frente da conservação ambiental e causas humanitárias, e veja como você pode apoiar.</p>
+
+        <!-- Aqui você pode listar as ONGs, similar à seção do index.html ou com mais detalhes -->
+        <div class="row gy-4">
+            <!-- Exemplo de Card de ONG -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card ong-card h-100">
+                    <div class="position-relative">
+                        <img src="../assets/images/ongs/sos_mata_atlantica.svg" class="ong-image-placeholder card-img-top" alt="SOS Mata Atlântica">
+                        <span class="badge category-badge position-absolute top-0 end-0 m-2 bg-success text-white">Ambiental</span>
+                    </div>
+                    <div class="card-body d-flex flex-column text-center">
+                        <h3 class="card-title h5 ong-title">SOS Mata Atlântica</h3>
+                        <p class="card-text small">Focada na proteção e restauração da Mata Atlântica.</p>
+                        <button class="btn btn-primary-custom mt-auto" data-bs-toggle="modal" data-bs-target="#ongModalDetalhes" aria-label="Saiba mais sobre SOS Mata Atlântica">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card ong-card h-100">
+                    <div class="position-relative">
+                        <img src="../assets/images/ongs/wwf_brasil.svg" class="ong-image-placeholder card-img-top" alt="WWF-Brasil">
+                        <span class="badge category-badge position-absolute top-0 end-0 m-2 bg-primary text-white">Conservação</span>
+                    </div>
+                    <div class="card-body d-flex flex-column text-center">
+                        <h3 class="card-title h5 ong-title">WWF-Brasil</h3>
+                        <p class="card-text small">Atua na conservação da natureza e uso racional de recursos naturais.</p>
+                        <button class="btn btn-primary-custom mt-auto" data-bs-toggle="modal" data-bs-target="#ongModalDetalhes" aria-label="Saiba mais sobre WWF-Brasil">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+             <div class="col-12 col-md-6 col-lg-4">
+                <div class="card ong-card h-100">
+                    <div class="position-relative">
+                        <img src="../assets/images/ongs/greenpeace_brasil.svg" class="ong-image-placeholder card-img-top" alt="Greenpeace Brasil">
+                        <span class="badge category-badge position-absolute top-0 end-0 m-2 bg-info text-dark">Ativismo</span>
+                    </div>
+                    <div class="card-body d-flex flex-column text-center">
+                        <h3 class="card-title h5 ong-title">Greenpeace Brasil</h3>
+                        <p class="card-text small">Organização ativista global com foco em diversos problemas ambientais.</p>
+                        <button class="btn btn-primary-custom mt-auto" data-bs-toggle="modal" data-bs-target="#ongModalDetalhes" aria-label="Saiba mais sobre Greenpeace Brasil">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card ong-card h-100">
+                    <div class="position-relative">
+                        <img src="../assets/images/ongs/ipe_instituto_pesquisas_ecologicas.svg" class="ong-image-placeholder card-img-top" alt="IPÊ - Instituto de Pesquisas Ecológicas">
+                        <span class="badge category-badge position-absolute top-0 end-0 m-2 bg-warning text-dark">Pesquisa</span>
+                    </div>
+                    <div class="card-body d-flex flex-column text-center">
+                        <h3 class="card-title h5 ong-title">IPÊ</h3>
+                        <p class="card-text small">Instituto de Pesquisas Ecológicas dedicado à conservação da biodiversidade.</p>
+                        <button class="btn btn-primary-custom mt-auto" data-bs-toggle="modal" data-bs-target="#ongModalDetalhes" aria-label="Saiba mais sobre IPÊ">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card ong-card h-100">
+                    <div class="position-relative">
+                        <img src="../assets/images/ongs/instituto_socioambiental_isa.svg" class="ong-image-placeholder card-img-top" alt="Instituto Socioambiental - ISA">
+                        <span class="badge category-badge position-absolute top-0 end-0 m-2 bg-secondary text-white">Socioambiental</span>
+                    </div>
+                    <div class="card-body d-flex flex-column text-center">
+                        <h3 class="card-title h5 ong-title">ISA</h3>
+                        <p class="card-text small">Instituto Socioambiental que trabalha com povos indígenas e comunidades tradicionais.</p>
+                        <button class="btn btn-primary-custom mt-auto" data-bs-toggle="modal" data-bs-target="#ongModalDetalhes" aria-label="Saiba mais sobre ISA">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card ong-card h-100">
+                    <div class="position-relative">
+                        <img src="../assets/images/ongs/sos_amazonia.svg" class="ong-image-placeholder card-img-top" alt="SOS Amazônia">
+                        <span class="badge category-badge position-absolute top-0 end-0 m-2 bg-success text-white">Amazônia</span>
+                    </div>
+                    <div class="card-body d-flex flex-column text-center">
+                        <h3 class="card-title h5 ong-title">SOS Amazônia</h3>
+                        <p class="card-text small">Organização focada na proteção e preservação da Floresta Amazônica.</p>
+                        <button class="btn btn-primary-custom mt-auto" data-bs-toggle="modal" data-bs-target="#ongModalDetalhes" aria-label="Saiba mais sobre SOS Amazônia">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Adicionar mais cards de ONGs aqui -->
+        </div>
+    </main>
+
+    <footer class="py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 EcoVaquinho. Todos os direitos reservados.</p>
+            <p><a href="#" class="footer-link">Política de Privacidade</a> | <a href="#" class="footer-link">Termos de Uso</a></p>
+        </div>
+    </footer>
+
+    <!-- Modal Genérico para Detalhes da ONG -->
+    <div class="modal fade" id="ongModalDetalhes" tabindex="-1" aria-labelledby="ongModalDetalhesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ongModalDetalhesLabel">Detalhes da ONG</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Conteúdo do modal será preenchido via JS ou você pode ter modais específicos -->
+                    <p>Informações detalhadas sobre a ONG aparecerão aqui.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary-custom" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary-custom">Doar para esta ONG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
