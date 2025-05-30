@@ -439,4 +439,49 @@ h2 {
 
 .mb-5 { /* Classe do Bootstrap para margin bottom */
     margin-bottom: 3rem !important;
+}
+
+/* Regras específicas para cards de campanhas */
+.campaign-card {
+    overflow: hidden; /* Garante que nada saia do card */
+    max-width: 100%;
+    padding: 0; /* Remove padding do card para permitir imagem de largura total */
+}
+
+.campaign-card .campaign-image-placeholder {
+    background-color: #f8f9fa; /* Fundo claro harmonioso para as imagens */
+    display: flex; /* Centraliza a imagem */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    min-height: 180px; /* Altura mínima */
+    padding: 0.5rem; /* Padding para dar respiração */
+    border-radius: 12px 12px 0 0; /* Cantos superiores arredondados */
+    overflow: hidden;
+}
+
+/* Regra específica para imagens de campanhas dentro dos cards */
+.campaign-card img {
+    object-fit: contain !important; /* Força a exibição completa da imagem */
+    object-position: center !important; /* Centraliza a imagem */
+    background-color: transparent; /* Remove fundo da imagem em si */
+    width: 100% !important; /* 100% da largura do container */
+    height: auto !important; /* Altura automática para manter proporção */
+    max-width: 100%; /* Largura máxima do container */
+    min-height: 120px; /* Altura mínima para consistência */
+}
+
+/* Ajusta o body do card de campanha para ter padding apenas no conteúdo */
+.campaign-card .card-body {
+    padding: 1.5rem; /* Mantém padding apenas no body do card */
+}
+
+/* Garantir que imagens SVG de campanhas se comportem corretamente */
+.campaign-card img[src$=".svg"] {
+    object-fit: contain; /* Para campanhas, contain mostra imagem completa */
+    background-color: transparent; /* Remove fundo individual da imagem */
+    padding: 0; /* Remove padding da imagem, o container já tem */
+    width: 100% !important; /* 100% da largura */
+    height: auto !important; /* Altura automática para manter proporção */
+    max-width: 100%;
+    min-height: 100px; /* Altura mínima para SVGs de campanhas */
 } 
