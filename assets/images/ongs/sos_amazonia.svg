@@ -1,0 +1,42 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo com gradiente verde escuro representando a Amazônia -->
+  <defs>
+    <linearGradient id="amazoniaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#006400;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#004225;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="300" height="200" fill="url(#amazoniaGradient)"/>
+  
+  <!-- Círculo central -->
+  <circle cx="150" cy="100" r="70" fill="#228b22" opacity="0.9"/>
+  
+  <!-- Texto SOS -->
+  <text x="150" y="80" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="26" font-weight="bold">SOS</text>
+  
+  <!-- Texto AMAZÔNIA -->
+  <text x="150" y="105" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">AMAZÔNIA</text>
+  
+  <!-- Elementos de floresta densa -->
+  <path d="M 70 130 L 90 115 L 110 130 L 130 115 L 150 130 L 170 115 L 190 130 L 210 115 L 230 130" stroke="#90ee90" stroke-width="4" fill="none"/>
+  
+  <!-- Árvores da floresta -->
+  <circle cx="85" cy="140" r="8" fill="#32cd32"/>
+  <circle cx="125" cy="145" r="6" fill="#90ee90"/>
+  <circle cx="175" cy="145" r="6" fill="#90ee90"/>
+  <circle cx="215" cy="140" r="8" fill="#32cd32"/>
+  
+  <!-- Rio representando os rios amazônicos -->
+  <rect x="70" y="160" width="160" height="15" fill="#4682b4" rx="8"/>
+  <text x="150" y="172" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="600">FLORESTA AMAZÔNICA</text>
+  
+  <!-- Folhas decorativas -->
+  <path d="M 50 50 Q 55 45 60 50 Q 55 55 50 50" fill="#32cd32"/>
+  <path d="M 240 50 Q 245 45 250 50 Q 245 55 240 50" fill="#32cd32"/>
+  
+  <!-- Pequenos pontos de biodiversidade -->
+  <circle cx="60" cy="120" r="3" fill="#ffd700"/>
+  <circle cx="240" cy="120" r="3" fill="#ffd700"/>
+  <circle cx="150" cy="40" r="3" fill="#ffd700"/>
+</svg> 

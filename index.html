@@ -1,11 +1,285 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Global Solution</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLogic - Doações para Desastres Ambientais</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="py-3">
+        <div class="container">
+            <div class="logo display-4 fw-bold">EcoLogic</div>
+            <div class="header-right-elements d-flex align-items-center">
+                <div class="search-wrapper me-3">
+                    <input type="search" class="form-control search-bar" placeholder="Pesquisar..." aria-label="Barra de pesquisa">
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/ongs.html">ONGs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/campanhas.html">Campanhas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/sobre.html">Sobre Nós</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
+    <main>
+        <section class="hero text-center py-5">
+            <div class="container">
+                <h1 class="display-5 fw-bold">Contribua para desastres ambientais</h1>
+                <p class="lead col-md-8 mx-auto">Uma plataforma para doações voltadas a desastres ambientais e problemas na humanidade. Encontre e contribua com vaquinhas.</p>
+                <button class="btn btn-primary-custom btn-lg" aria-label="Doar para campanhas">Doar</button>
+            </div>
+        </section>
+
+        <section class="featured-campaigns py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-5">Vaquinhas em destaque</h2>
+                <div class="row gy-4">
+                    <!-- Card de Campanha 1 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card campaign-card h-100">
+                            <img src="assets/images/campanhas/agua_limpa.svg" class="campaign-image-placeholder card-img-top" alt="Campanha Água Limpa">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Água Limpa para Todos</h3>
+                                <p class="card-text small mb-1 text-muted">Meta: R$20.000</p>
+                                <div class="progress mb-2" role="progressbar" aria-label="Progresso da campanha" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar" style="width: 50%;">50%</div>
+                                </div>
+                                <p class="card-text fw-semibold mb-3">R$10.000 arrecadados</p>
+                                <button class="btn btn-secondary-custom mt-auto" aria-label="Doar para Água Limpa para Todos">Doar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card de Campanha 2 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card campaign-card h-100">
+                            <img src="assets/images/campanhas/reflorestamento.svg" class="campaign-image-placeholder card-img-top" alt="Campanha Reflorestamento">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Reflorestamento Urgente</h3>
+                                <p class="card-text small mb-1 text-muted">Meta: R$20.000</p>
+                                <div class="progress mb-2" role="progressbar" aria-label="Progresso da campanha" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar" style="width: 75%;">75%</div>
+                                </div>
+                                <p class="card-text fw-semibold mb-3">R$15.000 arrecadados</p>
+                                <button class="btn btn-secondary-custom mt-auto" aria-label="Doar para Reflorestamento Urgente">Doar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card de Campanha 3 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card campaign-card h-100">
+                            <img src="assets/images/campanhas/animais_resgate.svg" class="campaign-image-placeholder card-img-top" alt="Campanha Resgate de Animais">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Resgate de Animais</h3>
+                                <p class="card-text small mb-1 text-muted">Meta: R$20.000</p>
+                                <div class="progress mb-2" role="progressbar" aria-label="Progresso da campanha" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar" style="width: 25%;">25%</div>
+                                </div>
+                                <p class="card-text fw-semibold mb-3">R$5.000 arrecadados</p>
+                                <button class="btn btn-secondary-custom mt-auto" aria-label="Doar para Resgate de Animais">Doar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-ongs py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-5">ONGs em Destaque</h2>
+                <div class="row gy-4">
+                    <!-- Card de ONG 1: SOS Mata Atlântica -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card ong-card h-100">
+                            <div class="position-relative">
+                                <img src="assets/images/ongs/sos_mata_atlantica.svg" class="ong-image-placeholder card-img-top" alt="SOS Mata Atlântica">
+                                <span class="badge category-badge position-absolute top-0 end-0 m-2 bg-success text-white">Mata Atlântica</span>
+                            </div>
+                            <div class="card-body d-flex flex-column text-center">
+                                <h3 class="card-title h5 ong-title">SOS Mata Atlântica</h3>
+                                <button class="btn btn-primary-custom mt-auto" data-bs-toggle="modal" data-bs-target="#ongModalSosMataAtlantica" aria-label="Saiba mais sobre SOS Mata Atlântica">Saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card de ONG 2: WWF-Brasil -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card ong-card h-100">
+                             <div class="position-relative">
+                                <img src="assets/images/ongs/wwf_brasil.svg" class="ong-image-placeholder card-img-top" alt="WWF-Brasil">
+                                <span class="badge category-badge position-absolute top-0 end-0 m-2 bg-primary text-white">Conservação</span>
+                            </div>
+                            <div class="card-body d-flex flex-column text-center">
+                                <h3 class="card-title h5 ong-title">WWF-Brasil</h3>
+                                <button class="btn btn-primary-custom mt-auto" data-bs-toggle="modal" data-bs-target="#ongModalWWFBrasil" aria-label="Saiba mais sobre WWF-Brasil">Saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card de ONG 3: Greenpeace Brasil -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card ong-card h-100">
+                            <div class="position-relative">
+                                <img src="assets/images/ongs/greenpeace_brasil.svg" class="ong-image-placeholder card-img-top" alt="Greenpeace Brasil">
+                                <span class="badge category-badge position-absolute top-0 end-0 m-2 bg-info text-dark">Ativismo Ambiental</span>
+                            </div>
+                            <div class="card-body d-flex flex-column text-center">
+                                <h3 class="card-title h5 ong-title">Greenpeace Brasil</h3>
+                                <button class="btn btn-primary-custom mt-auto" data-bs-toggle="modal" data-bs-target="#ongModalGreenpeace" aria-label="Saiba mais sobre Greenpeace Brasil">Saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card de ONG 4: IPÊ -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card ong-card h-100">
+                            <div class="position-relative">
+                                <img src="assets/images/ongs/ipe_instituto_pesquisas_ecologicas.svg" class="ong-image-placeholder card-img-top" alt="IPÊ">
+                                <span class="badge category-badge position-absolute top-0 end-0 m-2 bg-warning text-dark">Pesquisa Ecológica</span>
+                            </div>
+                            <div class="card-body d-flex flex-column text-center">
+                                <h3 class="card-title h5 ong-title">IPÊ</h3>
+                                <button class="btn btn-primary-custom mt-auto" data-bs-toggle="modal" data-bs-target="#ongModalIPE" aria-label="Saiba mais sobre IPÊ - Instituto de Pesquisas Ecológicas">Saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 EcoLogic. Todos os direitos reservados.</p>
+            <p><a href="#" class="footer-link">Política de Privacidade</a> | <a href="#" class="footer-link">Termos de Uso</a></p>
+        </div>
+    </footer>
+
+    <!-- Modais para ONGs Reais -->
+    <!-- Modal SOS Mata Atlântica -->
+    <div class="modal fade" id="ongModalSosMataAtlantica" tabindex="-1" aria-labelledby="ongModalSosMataAtlanticaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ongModalSosMataAtlanticaLabel">SOS Mata Atlântica</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/images/ongs/sos_mata_atlantica.svg" class="img-fluid rounded mb-3 mb-md-0 ong-image-placeholder" alt="SOS Mata Atlântica">
+                        </div>
+                        <div class="col-md-8">
+                            <p>A Fundação SOS Mata Atlântica é uma ONG brasileira que atua na promoção de políticas públicas para a conservação da Mata Atlântica, através do monitoramento do bioma, produção de estudos, projetos demonstrativos, diálogo com setores públicos e privados, aprimoramento da legislação ambiental, comunicação e engajamento da sociedade.</p>
+                            <p><strong>Causas:</strong> Proteção da Mata Atlântica, restauração florestal, água limpa, conservação marinha.</p>
+                            <p><a href="https://www.sosma.org.br/" target="_blank" rel="noopener noreferrer">Visite o site</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary-custom" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary-custom">Doar para SOS Mata Atlântica</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal WWF-Brasil -->
+    <div class="modal fade" id="ongModalWWFBrasil" tabindex="-1" aria-labelledby="ongModalWWFBrasilLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ongModalWWFBrasilLabel">WWF-Brasil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                     <div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/images/ongs/wwf_brasil.svg" class="img-fluid rounded mb-3 mb-md-0 ong-image-placeholder" alt="WWF-Brasil">
+                        </div>
+                        <div class="col-md-8">
+                            <p>O WWF-Brasil é uma organização da sociedade civil brasileira que integra a Rede WWF, a maior rede independente de conservação da natureza, com atuação em mais de 100 países. Trabalha para mudar a atual trajetória de degradação ambiental e promover um futuro em que sociedade e natureza vivam em harmonia.</p>
+                            <p><strong>Causas:</strong> Amazônia, Cerrado, Mata Atlântica, Pantanal, oceanos, clima, agricultura sustentável, água.</p>
+                            <p><a href="https://www.wwf.org.br/" target="_blank" rel="noopener noreferrer">Visite o site</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary-custom" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary-custom">Doar para WWF-Brasil</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Greenpeace Brasil -->
+     <div class="modal fade" id="ongModalGreenpeace" tabindex="-1" aria-labelledby="ongModalGreenpeaceLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ongModalGreenpeaceLabel">Greenpeace Brasil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/images/ongs/greenpeace_brasil.svg" class="img-fluid rounded mb-3 mb-md-0 ong-image-placeholder" alt="Greenpeace Brasil">
+                        </div>
+                        <div class="col-md-8">
+                            <p>O Greenpeace é uma organização global e independente que atua para defender o meio ambiente e promover a paz, inspirando as pessoas a mudarem atitudes e comportamentos. No Brasil, suas principais frentes de atuação são Amazônia, Clima e Energia, e Agricultura e Alimentação.</p>
+                            <p><strong>Causas:</strong> Proteção de florestas, combate às mudanças climáticas, energias renováveis, oceanos, agricultura sustentável.</p>
+                             <p><a href="https://www.greenpeace.org/brasil/" target="_blank" rel="noopener noreferrer">Visite o site</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary-custom" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary-custom">Doar para Greenpeace Brasil</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal IPÊ -->
+    <div class="modal fade" id="ongModalIPE" tabindex="-1" aria-labelledby="ongModalIPELabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ongModalIPELabel">IPÊ - Instituto de Pesquisas Ecológicas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                     <div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/images/ongs/ipe_instituto_pesquisas_ecologicas.svg" class="img-fluid rounded mb-3 mb-md-0 ong-image-placeholder" alt="IPÊ">
+                        </div>
+                        <div class="col-md-8">
+                            <p>O IPÊ - Instituto de Pesquisas Ecológicas é uma organização brasileira dedicada à conservação da biodiversidade por meio de ciência, educação ambiental e apoio a negócios sustentáveis. Desenvolve projetos em diferentes biomas brasileiros, como Mata Atlântica, Amazônia e Pantanal.</p>
+                            <p><strong>Causas:</strong> Conservação de espécies ameaçadas, restauração de habitats, educação ambiental, negócios sustentáveis.</p>
+                            <p><a href="https://ipe.org.br/" target="_blank" rel="noopener noreferrer">Visite o site</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary-custom" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary-custom">Doar para IPÊ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Opcional: seu script.js personalizado -->
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>
