@@ -1,0 +1,358 @@
+/*
+  Cores Primárias e Configurações Globais
+  - Azul Claro: #5AA9E6
+  - Azul Médio: #7FC8F8
+  - Branco Neve: #F9F9F9
+  - Amarelo Claro: #FFE45E
+  - Rosa Vibrante: #FF6392
+  Fonte: 'Poppins', Google Fonts
+*/
+
+:root {
+    --azul-claro: #5AA9E6;
+    --azul-medio: #7FC8F8;
+    --branco-neve: #F9F9F9;
+    --amarelo-claro: #FFE45E;
+    --rosa-vibrante: #FF6392;
+    --texto-escuro: #212529; /* Cor padrão do Bootstrap para texto */
+    --bs-body-font-family: 'Poppins', sans-serif;
+    --bs-body-bg: var(--branco-neve);
+}
+
+body {
+    font-family: var(--bs-body-font-family);
+    background-color: var(--bs-body-bg);
+    color: var(--texto-escuro);
+    font-size: 16px; /* Tamanho base do texto */
+}
+
+/* Ajustes de acessibilidade para foco */
+.btn:focus-visible,
+.form-control:focus-visible,
+.nav-link:focus-visible {
+    outline: 2px solid var(--amarelo-claro);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 0.25rem rgba(255, 228, 94, 0.5); /* Sombra amarela para foco */
+}
+
+/*
+  Cabeçalho (Header)
+  - Logo à esquerda, busca e navegação à direita.
+  - Espaçamento generoso.
+*/
+header {
+    background-color: var(--azul-medio); /* Fundo Azul Médio */
+    /* padding-top e padding-bottom já vêm da classe .py-3 do Bootstrap */
+    border-bottom: 1px solid rgba(255,255,255,0.2); /* Adiciona uma borda sutil */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--branco-neve); /* Logo com cor branca para contraste */
+    font-weight: 700; /* Título com peso 600+ */
+    font-size: 2rem; /* Ajustado para caber melhor no layout flex */
+    /* margin-bottom: 1.5rem !important; REMOVIDO - não mais necessário */
+}
+
+.search-bar {
+    border: 1px solid var(--azul-claro);
+    border-radius: 0.75rem; /* Cantos arredondados */
+    padding: 0.5rem 1rem; /* Padding ajustado */
+    max-width: 250px; /* Ajuste a largura máxima conforme necessário */
+    background-color: var(--branco-neve); /* Fundo branco para contraste */
+    color: var(--texto-escuro);
+}
+
+.search-bar::placeholder {
+    color: #6c757d; /* Cor do placeholder do Bootstrap */
+}
+
+/* Removendo regras de responsividade anteriores para .search-bar que a tornavam muito larga */
+/* @media (min-width: 768px) { ... } e @media (min-width: 992px) { ... } para .search-bar removidos */
+
+.main-nav .nav-link {
+    color: var(--branco-neve);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem; /* Espaçamento entre links ajustado */
+    border-radius: 0.375rem;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.main-nav .nav-link:hover,
+.main-nav .nav-link:focus {
+    color: var(--texto-escuro);
+    background-color: var(--amarelo-claro);
+}
+
+/* Ajuste para o wrapper dos elementos da direita no header se necessário */
+.header-right-elements {
+    gap: 1rem; /* Espaçamento entre a barra de busca e a navegação */
+}
+
+/*
+  Seção Hero
+  - Título proeminente.
+  - Botão de CTA principal.
+*/
+.hero {
+    background-color: var(--branco-neve); /* Mantém um fundo claro mas pode ser ajustado */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.hero h1 {
+    font-weight: 700; /* Título com peso 600+ */
+    font-size: calc(1.5rem + 1.5vw); /* Tamanho responsivo, 24px+ */
+    color: var(--texto-escuro);
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+    .hero h1 {
+        font-size: 3rem; /* Tamanho maior para telas grandes */
+    }
+}
+
+.hero p {
+    font-size: 1.125rem; /* Texto com tamanho mínimo de 16px (1.125 * 16 = 18px) */
+    color: #495057; /* Cor de texto suave */
+    margin-bottom: 2rem;
+}
+
+/*
+  Botões Customizados
+  - Botão Primário: Azul Claro
+  - Botão Secundário (ex: Doar nos cards de campanha): Rosa Vibrante
+*/
+.btn-primary-custom {
+    background-color: var(--azul-claro);
+    border-color: var(--azul-claro);
+    color: var(--branco-neve);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.btn-primary-custom:hover, .btn-primary-custom:focus {
+    background-color: #4a98d3; /* Azul claro um pouco mais escuro */
+    border-color: #4a98d3;
+    color: var(--branco-neve);
+}
+
+.btn-secondary-custom {
+    background-color: var(--rosa-vibrante);
+    border-color: var(--rosa-vibrante);
+    color: var(--branco-neve);
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.btn-secondary-custom:hover, .btn-secondary-custom:focus {
+    background-color: #e64b7e; /* Rosa vibrante um pouco mais escuro */
+    border-color: #e64b7e;
+    color: var(--branco-neve);
+}
+
+/*
+  Cards (Campanhas e ONGs)
+  - Estilo geral para cards, incluindo sombra e bordas arredondadas.
+*/
+.card {
+    border: none; /* Remove borda padrão do Bootstrap se a sombra for suficiente */
+    border-radius: 12px; /* Cantos arredondados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    background-color: var(--branco-neve); /* Fundo branco neve */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    font-weight: 600; /* Títulos com peso 600+ */
+    font-size: 1.25rem; /* Ajuste conforme necessário, 24px+ para títulos principais */
+    margin-bottom: 0.75rem;
+}
+
+.campaign-image-placeholder,
+.ong-image-placeholder {
+    width: 100%;
+    height: 180px;
+    background-color: #e9ecef; /* Cor placeholder suave */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #adb5bd;
+    font-size: 1rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    position: relative;
+}
+
+/* Estilo do X no placeholder, opcional */
+.campaign-image-placeholder::before,
+.campaign-image-placeholder::after,
+.ong-image-placeholder::before,
+.ong-image-placeholder::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    background-color: #adb5bd;
+}
+.campaign-image-placeholder::before, .ong-image-placeholder::before { transform: rotate(45deg); }
+.campaign-image-placeholder::after, .ong-image-placeholder::after { transform: rotate(-45deg); }
+
+.progress-bar {
+    background-color: var(--azul-claro);
+}
+
+/*
+  Cards das ONGs
+  - Título da ONG em Azul Médio.
+  - Badges de categoria coloridos.
+  - Botão "Saiba mais".
+*/
+.featured-ongs .card-body {
+    padding: 1.5rem;
+}
+
+.ong-title {
+    color: var(--azul-medio);
+    font-weight: 700;
+    font-size: 1.3rem; /* Título com tamanho 24px+ (1.3*16 = 20.8px, ajustar se necessário) */
+}
+
+.category-badge {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4em 0.8em;
+    color: var(--texto-escuro);
+}
+
+/* Variações de cores para badges - exemplo */
+.category-badge:nth-of-type(3n+1) { background-color: var(--rosa-vibrante); color: var(--branco-neve); }
+.category-badge:nth-of-type(3n+2) { background-color: var(--azul-claro); color: var(--branco-neve);}
+.category-badge:nth-of-type(3n+3) { background-color: var(--amarelo-claro); }
+
+/* Como os badges são aplicados diretamente no HTML agora, vamos estilizar a classe .category-badge
+   e usar classes específicas para cores, se necessário, ou aplicar via JS no futuro */
+.badge.bg-rosa { background-color: var(--rosa-vibrante) !important; color: var(--branco-neve); }
+.badge.bg-azul-claro { background-color: var(--azul-claro) !important; color: var(--branco-neve); }
+.badge.bg-amarelo { background-color: var(--amarelo-claro) !important; color: var(--texto-escuro); }
+
+
+/* Para os cards de ONG, o botão "Saiba mais" já usa .btn-primary-custom que é azul claro */
+
+/*
+  Modal das ONGs
+  - Estilo consistente com o resto da página.
+*/
+.modal-content {
+    background-color: var(--branco-neve);
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.modal-header {
+    background-color: var(--azul-medio);
+    color: var(--branco-neve);
+    border-bottom: none;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%); /* Deixa o X branco */
+}
+
+.modal-title {
+    font-weight: 600;
+    font-size: 1.5rem; /* Título com tamanho 24px+ */
+}
+
+.modal-body {
+    padding: 2rem;
+    font-size: 1rem; /* Texto com 16px */
+}
+
+.modal-body .ong-image-placeholder.modal-img-placeholder {
+    height: 200px; /* Ajuste a altura da imagem no modal */
+    border-radius: 8px;
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+    padding: 1rem 2rem;
+}
+
+.category-badge-modal {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.4em 0.8em;
+    /* As cores serão herdadas ou podem ser setadas especificamente se necessário */
+}
+
+/*
+  Rodapé (Footer)
+  - Fundo Azul Médio ou Rosa Vibrante, texto claro, links com hover Amarelo Claro.
+*/
+footer {
+    background-color: var(--azul-medio); /* Ou var(--rosa-vibrante) */
+    color: var(--branco-neve);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-link {
+    color: var(--branco-neve);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+    color: var(--amarelo-claro);
+    text-decoration: underline;
+}
+
+/*
+  Ajustes para títulos e texto geral
+  - Títulos com peso 600+ e tamanhos maiores (24px+)
+  - Textos com cor escura e tamanho mínimo de 16px para boa legibilidade
+*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600; /* Garante peso para todos os títulos */
+    color: var(--texto-escuro); /* Cor padrão para títulos */
+}
+
+h2 {
+    font-size: 1.8rem; /* Exemplo de tamanho para H2, 24px+ */
+    margin-bottom: 1.5rem;
+}
+
+/* Seções principais com padding vertical */
+.py-5 { /* Classe do Bootstrap para padding vertical */
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+
+.mb-5 { /* Classe do Bootstrap para margin bottom */
+    margin-bottom: 3rem !important;
+} 
