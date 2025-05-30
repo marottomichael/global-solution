@@ -170,6 +170,8 @@ header .container {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave */
     background-color: var(--branco-neve); /* Fundo branco neve */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    overflow: hidden; /* Garante que o conteúdo não saia do card */
+    padding: 0; /* Remove padding padrão do card */
 }
 
 .card:hover {
@@ -196,21 +198,67 @@ header .container {
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     position: relative;
+    object-fit: cover; /* Garante que a imagem cubra toda a área disponível */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    overflow: hidden; /* Esconde qualquer conteúdo que saia da área definida */
 }
 
-/* Estilo do X no placeholder, opcional */
-.campaign-image-placeholder::before,
-.campaign-image-placeholder::after,
-.ong-image-placeholder::before,
-.ong-image-placeholder::after {
+/* Regras específicas para imagens quando usadas como card-img-top */
+.card-img-top.ong-image-placeholder,
+.card-img-top.campaign-image-placeholder {
+    border-radius: 12px 12px 0 0; /* Apenas cantos superiores arredondados */
+    object-fit: cover;
+    object-position: center;
+    width: 100%; /* Força 100% da largura do container */
+    max-width: 100%;
+    height: 180px;
+    display: block; /* Remove display flex quando for uma imagem real */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove padding para ocupar 100% */
+}
+
+/* Regras específicas para ONGs - imagem totalmente visível */
+.card-img-top.ong-image-placeholder {
+    object-fit: contain; /* Mostra a imagem completa sem cortar */
+    background-color: #f8f9fa; /* Fundo claro para preencher espaços vazios */
+    padding: 0.5rem; /* Pequeno padding para dar respiração à imagem */
+    height: auto; /* Altura automática para manter proporção */
+    min-height: 160px; /* Altura mínima para manter consistência visual */
+}
+
+/* Regras específicas para SVGs em imagens de ONGs */
+.ong-image-placeholder svg,
+.campaign-image-placeholder svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mudado de volta para contain para ONGs */
+}
+
+/* Garantir que imagens SVG se comportem corretamente */
+.ong-card img[src$=".svg"],
+.campaign-card img[src$=".svg"] {
+    object-fit: contain; /* Mudado de volta para contain para mostrar imagem completa */
+    background-color: transparent; /* Remove fundo individual da imagem */
+    padding: 0; /* Remove padding da imagem, o container já tem */
+    width: 100% !important; /* 100% da largura */
+    height: auto !important; /* Altura automática para manter proporção */
+    max-width: 100%;
+    min-height: 100px; /* Altura mínima para SVGs */
+}
+
+/* Estilo do X no placeholder apenas quando não há src (imagem não carregada) */
+.campaign-image-placeholder:not([src])::before,
+.campaign-image-placeholder:not([src])::after,
+.ong-image-placeholder:not([src])::before,
+.ong-image-placeholder:not([src])::after {
     content: '';
     position: absolute;
     width: 60%;
     height: 2px;
     background-color: #adb5bd;
 }
-.campaign-image-placeholder::before, .ong-image-placeholder::before { transform: rotate(45deg); }
-.campaign-image-placeholder::after, .ong-image-placeholder::after { transform: rotate(-45deg); }
+.campaign-image-placeholder:not([src])::before, .ong-image-placeholder:not([src])::before { transform: rotate(45deg); }
+.campaign-image-placeholder:not([src])::after, .ong-image-placeholder:not([src])::after { transform: rotate(-45deg); }
 
 .progress-bar {
     background-color: var(--azul-claro);
@@ -224,6 +272,42 @@ header .container {
 */
 .featured-ongs .card-body {
     padding: 1.5rem;
+}
+
+/* Regras específicas para cards de ONGs */
+.ong-card {
+    overflow: hidden; /* Garante que nada saia do card */
+    max-width: 100%;
+    padding: 0; /* Remove padding do card para permitir imagem de largura total */
+}
+
+.ong-card .position-relative {
+    overflow: hidden; /* Garante que a imagem não saia do container pai */
+    border-radius: 12px 12px 0 0; /* Cantos superiores arredondados */
+    margin: 0; /* Remove margem */
+    padding: 0.5rem; /* Padding para dar respiração */
+    width: 100%; /* Garante 100% da largura */
+    background-color: #f8f9fa; /* Fundo claro harmonioso para as imagens */
+    display: flex; /* Centraliza a imagem */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    min-height: 140px; /* Altura mínima reduzida para se adaptar melhor */
+}
+
+/* Ajusta o body do card para ter padding apenas no conteúdo */
+.ong-card .card-body {
+    padding: 1.5rem; /* Mantém padding apenas no body do card */
+}
+
+/* Regra específica para imagens de ONGs dentro dos cards */
+.ong-card img {
+    object-fit: contain !important; /* Força a exibição completa da imagem */
+    object-position: center !important; /* Centraliza a imagem */
+    background-color: transparent; /* Remove fundo da imagem em si */
+    width: 100% !important; /* 100% da largura do container */
+    height: auto !important; /* Altura automática para manter proporção */
+    max-width: 100%; /* Largura máxima do container */
+    min-height: 120px; /* Altura mínima para consistência */
 }
 
 .ong-title {
