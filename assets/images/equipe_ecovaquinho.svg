@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="earthGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8BC34A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4CAF50;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF8A80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F44336;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fundo céu -->
+  <rect width="400" height="200" fill="url(#skyGradient)"/>
+  
+  <!-- Chão/terra -->
+  <ellipse cx="200" cy="280" rx="200" ry="20" fill="url(#earthGradient)"/>
+  
+  <!-- Sol -->
+  <circle cx="350" cy="50" r="25" fill="#FFD54F" opacity="0.9"/>
+  <g stroke="#FFD54F" stroke-width="2" opacity="0.7">
+    <line x1="320" y1="20" x2="325" y2="25"/>
+    <line x1="335" y1="15" x2="340" y2="20"/>
+    <line x1="355" y1="15" x2="360" y2="20"/>
+    <line x1="375" y1="20" x2="380" y2="25"/>
+    <line x1="385" y1="35" x2="390" y2="40"/>
+    <line x1="385" y1="55" x2="390" y2="60"/>
+    <line x1="375" y1="75" x2="380" y2="80"/>
+  </g>
+  
+  <!-- Nuvens -->
+  <g fill="white" opacity="0.8">
+    <circle cx="80" cy="60" r="15"/>
+    <circle cx="95" cy="60" r="18"/>
+    <circle cx="110" cy="60" r="15"/>
+    
+    <circle cx="280" cy="80" r="12"/>
+    <circle cx="292" cy="80" r="15"/>
+    <circle cx="305" cy="80" r="12"/>
+  </g>
+  
+  <!-- Árvores de fundo -->
+  <g opacity="0.6">
+    <rect x="50" y="160" width="8" height="40" fill="#8D6E63"/>
+    <circle cx="54" cy="155" r="20" fill="#4CAF50"/>
+    
+    <rect x="320" y="170" width="10" height="35" fill="#8D6E63"/>
+    <circle cx="325" cy="165" r="18" fill="#66BB6A"/>
+  </g>
+  
+  <!-- Pessoas trabalhando juntas -->
+  <!-- Pessoa 1 (esquerda) -->
+  <g transform="translate(120, 180)">
+    <!-- Corpo -->
+    <ellipse cx="0" cy="15" rx="12" ry="18" fill="#4FC3F7"/>
+    <!-- Cabeça -->
+    <circle cx="0" cy="-5" r="8" fill="#FFCC80"/>
+    <!-- Cabelo -->
+    <path d="M-6 -10 Q0 -15, 6 -10 Q3 -12, 0 -12 Q-3 -12, -6 -10" fill="#8D6E63"/>
+    <!-- Braços -->
+    <ellipse cx="-8" cy="8" rx="4" ry="10" fill="#FFCC80" transform="rotate(-20)"/>
+    <ellipse cx="8" cy="8" rx="4" ry="10" fill="#FFCC80" transform="rotate(20)"/>
+    <!-- Pernas -->
+    <ellipse cx="-4" cy="30" rx="4" ry="12" fill="#1976D2"/>
+    <ellipse cx="4" cy="30" rx="4" ry="12" fill="#1976D2"/>
+  </g>
+  
+  <!-- Pessoa 2 (centro) -->
+  <g transform="translate(200, 175)">
+    <!-- Corpo -->
+    <ellipse cx="0" cy="15" rx="12" ry="18" fill="#66BB6A"/>
+    <!-- Cabeça -->
+    <circle cx="0" cy="-5" r="8" fill="#FFCC80"/>
+    <!-- Cabelo -->
+    <path d="M-6 -10 Q0 -15, 6 -10 Q3 -12, 0 -12 Q-3 -12, -6 -10" fill="#5D4037"/>
+    <!-- Braços -->
+    <ellipse cx="-8" cy="8" rx="4" ry="10" fill="#FFCC80" transform="rotate(-30)"/>
+    <ellipse cx="8" cy="8" rx="4" ry="10" fill="#FFCC80" transform="rotate(30)"/>
+    <!-- Pernas -->
+    <ellipse cx="-4" cy="30" rx="4" ry="12" fill="#424242"/>
+    <ellipse cx="4" cy="30" rx="4" ry="12" fill="#424242"/>
+  </g>
+  
+  <!-- Pessoa 3 (direita) -->
+  <g transform="translate(280, 185)">
+    <!-- Corpo -->
+    <ellipse cx="0" cy="15" rx="12" ry="18" fill="#FF8A65"/>
+    <!-- Cabeça -->
+    <circle cx="0" cy="-5" r="8" fill="#FFCC80"/>
+    <!-- Cabelo -->
+    <path d="M-6 -10 Q0 -15, 6 -10 Q3 -12, 0 -12 Q-3 -12, -6 -10" fill="#F57C00"/>
+    <!-- Braços -->
+    <ellipse cx="-8" cy="8" rx="4" ry="10" fill="#FFCC80" transform="rotate(-10)"/>
+    <ellipse cx="8" cy="8" rx="4" ry="10" fill="#FFCC80" transform="rotate(10)"/>
+    <!-- Pernas -->
+    <ellipse cx="-4" cy="30" rx="4" ry="12" fill="#6D4C41"/>
+    <ellipse cx="4" cy="30" rx="4" ry="12" fill="#6D4C41"/>
+  </g>
+  
+  <!-- Elementos que eles estão cuidando/protegendo -->
+  <!-- Planeta Terra no centro -->
+  <circle cx="200" cy="120" r="35" fill="#4FC3F7" opacity="0.3"/>
+  <g transform="translate(200, 120)">
+    <!-- Continentes -->
+    <path d="M-15 -10 Q-5 -15, 5 -10 Q15 -8, 20 0 Q15 8, 5 10 Q-5 15, -15 10 Q-25 5, -25 -5 Q-20 -8, -15 -10" fill="#4CAF50" opacity="0.8"/>
+    <ellipse cx="10" cy="-5" rx="8" ry="6" fill="#66BB6A" opacity="0.7"/>
+    <ellipse cx="-8" cy="8" rx="6" ry="4" fill="#8BC34A" opacity="0.6"/>
+  </g>
+  
+  <!-- Coração central representando amor/cuidado -->
+  <path d="M200 140 C195 135, 185 135, 185 145 C185 155, 200 165, 200 165 C200 165, 215 155, 215 145 C215 135, 205 135, 200 140 Z" fill="url(#heartGradient)" opacity="0.8"/>
+  
+  <!-- Elementos flutuantes representando união -->
+  <g fill="#FFD54F" opacity="0.7">
+    <circle cx="150" cy="100" r="3"/>
+    <circle cx="250" cy="110" r="3"/>
+    <circle cx="170" cy="130" r="2"/>
+    <circle cx="230" cy="140" r="2"/>
+  </g>
+  
+  <!-- Folhas e elementos naturais -->
+  <g fill="#4CAF50" opacity="0.6">
+    <ellipse cx="130" cy="120" rx="6" ry="3" transform="rotate(45 130 120)"/>
+    <ellipse cx="270" cy="130" rx="5" ry="3" transform="rotate(-30 270 130)"/>
+    <ellipse cx="160" cy="160" rx="4" ry="2" transform="rotate(60 160 160)"/>
+    <ellipse cx="240" cy="150" rx="4" ry="2" transform="rotate(-45 240 150)"/>
+  </g>
+  
+  <!-- Texto na parte inferior -->
+  <text x="200" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2E7D32" font-weight="bold">JUNTOS PELO PLANETA</text>
+</svg> 
