@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Atualiza placeholder para campanhas
-        searchBar.placeholder = 'Pesquisar campanhas...';
+        searchBar.placeholder = 'Pesquisar...';
     }
     
     /**
@@ -86,25 +86,5 @@ document.addEventListener('DOMContentLoaded', function() {
             // Remove a mensagem se não deve ser mostrada
             noResultsMessage.remove();
         }
-    }
-    
-    // Placeholder dinâmico para campanhas
-    if (searchBar && campaignCards.length > 0) {
-        const placeholders = [
-            'Pesquisar campanhas...',
-            'Ex: água limpa, reflorestamento...',
-            'Ex: animais, meio ambiente...',
-            'Ex: urgente, doação...'
-        ];
-        
-        let currentPlaceholder = 0;
-        
-        // Alterna placeholder a cada 4 segundos quando não há foco
-        setInterval(function() {
-            if (document.activeElement !== searchBar) {
-                searchBar.placeholder = placeholders[currentPlaceholder];
-                currentPlaceholder = (currentPlaceholder + 1) % placeholders.length;
-            }
-        }, 4000);
     }
 }); 
