@@ -191,23 +191,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Adiciona placeholder dinâmico à barra de pesquisa
-    if (searchBar) {
-        const placeholders = [
-            'Pesquisar ONGs...'
-        ];
-        
-        let currentPlaceholder = 0;
-        
-        // Alterna placeholder a cada 3 segundos quando não há foco
-        const placeholderInterval = setInterval(function() {
-            if (document.activeElement !== searchBar && !searchBar.value) {
-                searchBar.placeholder = placeholders[currentPlaceholder];
-                currentPlaceholder = (currentPlaceholder + 1) % placeholders.length;
-            }
-        }, 3000);
-    }
-    
     // Limpa busca quando ESC é pressionado
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && searchBar) {
