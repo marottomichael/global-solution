@@ -194,11 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Adiciona placeholder dinâmico à barra de pesquisa
     if (searchBar) {
         const placeholders = [
-            'Pesquisar ONGs...',
-            'Ex: WWF, Greenpeace, SOS...',
-            'Ex: ambiental, conservação...',
-            'Ex: pesquisa, ativismo...',
-            'Ex: mata atlântica, amazônia...'
+            'Pesquisar ONGs...'
         ];
         
         let currentPlaceholder = 0;
