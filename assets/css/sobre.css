@@ -1,0 +1,401 @@
+/* Estilos específicos para a página Sobre */
+
+/* Prevenção de scroll horizontal */
+body {
+    overflow-x: hidden;
+}
+
+/* Seção Hero com Vídeo de Fundo */
+.secao-intro {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.secao-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.secao-intro .container {
+    position: relative;
+    z-index: 1;
+}
+
+.secao-intro h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.secao-intro .lead {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Seção Nossa História com Vídeo de Fundo */
+.nossa-historia {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-historia {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.nossa-historia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.5)
+    );
+    z-index: 2;
+}
+
+.nossa-historia .container {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+}
+
+.nossa-historia .titulo-secao {
+    color: #ffffff;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nossa-historia .lead {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.nossa-historia .lead:hover {
+    transform: translateY(-5px);
+}
+
+/* Seção de Valores com Vídeo de Fundo */
+#missao-visao-valores {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-valores {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#missao-visao-valores::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.6)
+    );
+    z-index: 2;
+}
+
+#missao-visao-valores .container {
+    position: relative;
+    z-index: 3;
+}
+
+#missao-visao-valores .titulo-secao {
+    color: #ffffff;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.card-valor {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.4s ease;
+    transform: translateY(0);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card-valor:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-valor .rounded-circle {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-valor:hover .rounded-circle {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.card-valor h3 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-valor p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Depoimentos */
+.depoimento-item {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.depoimento-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Títulos das Seções */
+.titulo-secao {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.titulo-secao.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsividade para a seção Nossa História */
+@media (max-width: 768px) {
+    .nossa-historia {
+        min-height: 70vh;
+        padding: 60px 0;
+    }
+
+    .nossa-historia .titulo-secao {
+        font-size: 2.5rem;
+    }
+
+    .nossa-historia .lead {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+    }
+}
+
+/* Responsividade para a seção de valores */
+@media (max-width: 768px) {
+    #missao-visao-valores {
+        min-height: 70vh;
+        padding: 60px 0;
+    }
+
+    #missao-visao-valores .titulo-secao {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .card-valor {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-valor .rounded-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card-valor h3 {
+        font-size: 1.5rem;
+    }
+
+    .card-valor p {
+        font-size: 1rem;
+    }
+}
+
+/* Animações de Scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Classes de animação */
+.animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fadeInLeft {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.animate-fadeInRight {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+/* Cards de Impacto */
+.card-impacto {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.card-impacto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card-impacto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    border-radius: inherit;
+    transition: all 0.3s ease;
+}
+
+.card-impacto:hover::before {
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+}
+
+.card-impacto h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card-impacto:hover h3 {
+    transform: scale(1.1);
+}
+
+.card-impacto p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Responsividade para os cards de impacto */
+@media (max-width: 768px) {
+    .card-impacto h3 {
+        font-size: 2rem;
+    }
+    
+    .card-impacto p {
+        font-size: 1rem;
+    }
+} 

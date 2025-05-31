@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../assets/css/sobre.css">
 </head>
 <body>
     <header class="py-3">
@@ -30,70 +31,76 @@
     </header>
 
     <main>
-        <!-- Seção Hero -->
-        <section class="hero text-center py-5" style="background: linear-gradient(to bottom, white 0%, var(--azul-claro) 100%);">
+        <!-- Seção Hero com Parallax -->
+        <section id="sobre-intro" class="secao-intro">
+            <video class="video-background" autoplay muted loop playsinline>
+                <source src="../assets/videos/queimada.mp4" type="video/mp4">
+            </video>
             <div class="container">
-                <h1 class="display-4 fw-bold mb-4" style="color: #000;">Sobre a EcoLogic</h1>
-                <p class="lead mb-5" style="color: var(--texto-escuro); max-width: 600px; margin: 0 auto;">
+                <h1 class="display-4 fw-bold mb-4">Sobre a EcoLogic</h1>
+                <p class="lead mb-5">
                     Conectando doadores a causas ambientais e humanitárias urgentes através da tecnologia e transparência.
                 </p>
-                
-                <!-- Imagem sobre nós -->
-                <div class="mb-5">
-                    <img src="../assets/images/sobre_ecologic.svg" class="img-fluid rounded-3 shadow-lg" alt="Conectando corações ao planeta através da tecnologia" style="max-width: 600px; max-height: 400px;">
+            </div>
+        </section>
+
+        <!-- Seção Nossa História com Vídeo de Fundo -->
+        <section id="nossa-historia" class="nossa-historia">
+            <video class="video-historia" autoplay muted loop playsinline>
+                <source src="../assets/videos/ajuda.mp4" type="video/mp4">
+            </video>
+            <div class="container">
+                <h2 class="titulo-secao text-center fw-bold mb-5">Nossa História</h2>
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <p class="lead text-center">
+                            Fundada em 2024, a EcoLogic nasceu da necessidade de criar uma ponte entre doadores e causas ambientais urgentes.
+                            Nossa plataforma utiliza tecnologia de ponta para garantir transparência e eficiência em cada doação.
+                            Juntos, estamos construindo um futuro mais sustentável e solidário.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção de Missão, Visão e Valores -->
-        <section class="py-5">
+        <!-- Seção Missão, Visão e Valores -->
+        <section id="missao-visao-valores" class="py-5">
+            <video class="video-valores" autoplay muted loop playsinline>
+                <source src="../assets/videos/plantas.mp4" type="video/mp4">
+            </video>
             <div class="container">
+                <h2 class="titulo-secao text-center fw-bold mb-5">Missão, Visão e Valores</h2>
                 <div class="row gy-5">
                     <!-- Missão -->
                     <div class="col-lg-4">
-                        <div class="card h-100 border-0 shadow-sm" style="background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 100%);">
-                            <div class="card-body text-center p-4">
-                                <div class="mb-4">
-                                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle" 
-                                         style="width: 80px; height: 80px; background-color: var(--azul-claro);">
-                                        <span style="font-size: 2rem;">🎯</span>
-                                    </div>
-                                </div>
-                                <h3 class="fw-bold mb-3" style="color: var(--azul-medio);">Nossa Missão</h3>
-                                <p class="mb-0">Facilitar a captação de recursos para organizações e projetos que trabalham incansavelmente para proteger nosso planeta e ajudar comunidades em momentos de crise.</p>
+                        <div class="card card-valor">
+                            <div class="rounded-circle" style="background-color: var(--azul-claro);">
+                                <span style="font-size: 2.5rem;">🎯</span>
                             </div>
+                            <h3 class="fw-bold mb-3">Nossa Missão</h3>
+                            <p>Facilitar a captação de recursos para organizações e projetos que trabalham incansavelmente para proteger nosso planeta e ajudar comunidades em momentos de crise.</p>
                         </div>
                     </div>
 
                     <!-- Visão -->
                     <div class="col-lg-4">
-                        <div class="card h-100 border-0 shadow-sm" style="background: linear-gradient(135deg, #E8F5E8 0%, #FFF9C4 100%);">
-                            <div class="card-body text-center p-4">
-                                <div class="mb-4">
-                                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle" 
-                                         style="width: 80px; height: 80px; background-color: var(--amarelo-claro);">
-                                        <span style="font-size: 2rem;">🔮</span>
-                                    </div>
-                                </div>
-                                <h3 class="fw-bold mb-3" style="color: var(--azul-medio);">Nossa Visão</h3>
-                                <p class="mb-0">Ser a plataforma de referência em doações para desastres ambientais e causas humanitárias no Brasil, reconhecida pela transparência, impacto e facilidade de uso.</p>
+                        <div class="card card-valor">
+                            <div class="rounded-circle" style="background-color: var(--amarelo-claro);">
+                                <span style="font-size: 2.5rem;">🔮</span>
                             </div>
+                            <h3 class="fw-bold mb-3">Nossa Visão</h3>
+                            <p>Ser a plataforma de referência em doações para desastres ambientais e causas humanitárias no Brasil, reconhecida pela transparência, impacto e facilidade de uso.</p>
                         </div>
                     </div>
 
                     <!-- Valores -->
                     <div class="col-lg-4">
-                        <div class="card h-100 border-0 shadow-sm" style="background: linear-gradient(135deg, #FFE0E6 0%, #FFF3E0 100%);">
-                            <div class="card-body text-center p-4">
-                                <div class="mb-4">
-                                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle" 
-                                         style="width: 80px; height: 80px; background-color: var(--rosa-vibrante);">
-                                        <span style="font-size: 2rem;">💎</span>
-                                    </div>
-                                </div>
-                                <h3 class="fw-bold mb-3" style="color: var(--azul-medio);">Nossos Valores</h3>
-                                <p class="mb-0">Transparência, impacto, solidariedade, sustentabilidade e inovação são os pilares que guiam todas as nossas ações e decisões.</p>
+                        <div class="card card-valor">
+                            <div class="rounded-circle" style="background-color: var(--rosa-vibrante);">
+                                <span style="font-size: 2.5rem;">💎</span>
                             </div>
+                            <h3 class="fw-bold mb-3">Nossos Valores</h3>
+                            <p>Transparência, impacto, solidariedade, sustentabilidade e inovação são os pilares que guiam todas as nossas ações e decisões.</p>
                         </div>
                     </div>
                 </div>
@@ -184,44 +191,65 @@
         </section>
 
         <!-- Seção de Estatísticas -->
-        <section class="py-5">
+        <section class="py-5" id="impacto">
             <div class="container">
                 <h2 class="text-center fw-bold mb-5" style="color: var(--azul-medio);">Nosso Impacto</h2>
                 <div class="row text-center gy-4">
                     <div class="col-6 col-md-3">
-                        <div class="card border-0 h-100" style="background: linear-gradient(135deg, var(--azul-claro), var(--azul-medio));">
+                        <div class="card card-impacto border-0 h-100" style="background: linear-gradient(135deg, var(--azul-claro), var(--azul-medio));">
                             <div class="card-body text-white p-4">
-                                <h3 class="fw-bold mb-2" style="font-size: 2.5rem;">50+</h3>
+                                <h3 class="fw-bold mb-2 impacto-ongs" style="font-size: 2.5rem;">0+</h3>
                                 <p class="mb-0">ONGs Parceiras</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="card border-0 h-100" style="background: linear-gradient(135deg, var(--rosa-vibrante), #E91E63);">
+                        <div class="card card-impacto border-0 h-100" style="background: linear-gradient(135deg, var(--rosa-vibrante), #E91E63);">
                             <div class="card-body text-white p-4">
-                                <h3 class="fw-bold mb-2" style="font-size: 2.5rem;">200+</h3>
+                                <h3 class="fw-bold mb-2 impacto-campanhas" style="font-size: 2.5rem;">0+</h3>
                                 <p class="mb-0">Campanhas Ativas</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="card border-0 h-100" style="background: linear-gradient(135deg, var(--amarelo-claro), #FFA000);">
+                        <div class="card card-impacto border-0 h-100" style="background: linear-gradient(135deg, var(--amarelo-claro), #FFA000);">
                             <div class="card-body text-white p-4">
-                                <h3 class="fw-bold mb-2" style="font-size: 2.5rem;">R$2M+</h3>
+                                <h3 class="fw-bold mb-2 impacto-arrecadado" style="font-size: 2.5rem;">R$0+</h3>
                                 <p class="mb-0">Arrecadados</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="card border-0 h-100" style="background: linear-gradient(135deg, #4CAF50, #2E7D32);">
+                        <div class="card card-impacto border-0 h-100" style="background: linear-gradient(135deg, #4CAF50, #2E7D32);">
                             <div class="card-body text-white p-4">
-                                <h3 class="fw-bold mb-2" style="font-size: 2.5rem;">10K+</h3>
+                                <h3 class="fw-bold mb-2 impacto-doadores" style="font-size: 2.5rem;">0+</h3>
                                 <p class="mb-0">Doadores Ativos</p>
                             </div>
                         </div>
                     </div>
             </div>
         </div>
+        </section>
+
+        <!-- Seção Depoimentos -->
+        <section id="depoimentos" class="py-5">
+            <div class="container">
+                <h2 class="titulo-secao text-center fw-bold mb-5">Depoimentos</h2>
+                <div class="row gy-4">
+                    <div class="col-md-6">
+                        <div class="depoimento-item card border-0 shadow-sm p-4">
+                            <p class="mb-3">"A EcoLogic transformou a forma como contribuímos com causas ambientais."</p>
+                            <footer class="blockquote-footer">Maria Santos, Doadora</footer>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="depoimento-item card border-0 shadow-sm p-4">
+                            <p class="mb-3">"A equipe da EcoLogic é incrível! Eles realmente se importam com o que fazem."</p>
+                            <footer class="blockquote-footer">Pedro Oliveira, Doador</footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -232,6 +260,10 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/sobre.js"></script>
 </body>
 </html> 
