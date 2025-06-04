@@ -5,6 +5,14 @@ body {
     overflow-x: hidden;
 }
 
+.logo {
+    font-family: 'Lilita One';
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    color: var(--branco-neve);
+    text-decoration: none;
+}
+
 /* Seção Hero com Vídeo de Fundo */
 .secao-intro {
     position: relative;

@@ -1,20 +1,20 @@
 /*
   Cores Primárias e Configurações Globais
-  - Azul Claro: #5AA9E6
-  - Azul Médio: #7FC8F8
+  - Azul Claro: #131D4F
+  - Azul Médio: #254D70
   - Branco Neve: #F9F9F9
-  - Amarelo Claro: #FFE45E
+  - Amarelo Claro: #FFB22C
   - Rosa Vibrante: #FF6392
   Fonte: 'Poppins', Google Fonts
 */
 
 :root {
-    --azul-claro: #5AA9E6;
-    --azul-medio: #7FC8F8;
+    --azul-claro: #131D4F;
+    --azul-medio: #254D70;
     --branco-neve: #F9F9F9;
-    --amarelo-claro: #FFE45E;
+    --amarelo-claro: #FFB22C;
     --rosa-vibrante: #FF6392;
-    --texto-escuro: #212529; /* Cor padrão do Bootstrap para texto */
+    --texto-escuro: #171a1c; /* Cor padrão do Bootstrap para texto */
     --bs-body-font-family: 'Poppins', sans-serif;
     --bs-body-bg: var(--branco-neve);
 }
@@ -24,6 +24,14 @@ body {
     background-color: var(--bs-body-bg);
     color: var(--texto-escuro);
     font-size: 16px; /* Tamanho base do texto */
+}
+
+.logo {
+    font-family: "Lilita One", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    color: var(--branco-neve);
+    text-decoration: none;
 }
 
 /* Ajustes de acessibilidade para foco */
