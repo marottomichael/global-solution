@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <!-- VLibras Widget -->
+    <div vw="true" class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
     <header class="py-3">
         <div class="container">
             <div class="logo display-4 fw-bold">Somaê</div>
