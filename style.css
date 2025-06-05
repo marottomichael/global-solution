@@ -493,3 +493,11 @@ h2 {
     max-width: 100%;
     min-height: 100px; /* Altura mínima para SVGs de campanhas */
 } 
+
+.testimonials .card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.testimonials .card:hover {
+    transform: translateY(-5px);
+}
