@@ -504,30 +504,49 @@ h2 {
 
 /* carrossel home */
 .bars-container {
-    gap: 10px;
-  }
-  
-  .bar {
-    width: 12px;
-    height: 50px;
-    background-color: #007BFF;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .bar.active {
-    transform: scale(1.2);
-    opacity: 0.8;
-  }
-  
-  .hero-img {
-    max-height: 400px;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-  }
-  
-  .hero-img.animate {
-    transform: scale(1.05);
-    opacity: 0.8;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Aumentado o espaçamento entre as barras */
+  align-items: center;
+  justify-content: center;
+  height: 250px; /* Altura específica para o container das barras */
+}
+
+.bar {
+  width: 12px;
+  height: 60px; /* Altura fixa para cada barra */
+  background-color: #007BFF;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.bar:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.bar.active {
+  transform: scale(1.2);
+  background-color: #003d82;
+  opacity: 1;
+}
+
+.hero-img {
+  max-height: 400px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.hero-img.animate {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+/* Garante que o container da imagem tenha altura definida */
+.hero .position-relative {
+  height: 400px !important;
+}
   
